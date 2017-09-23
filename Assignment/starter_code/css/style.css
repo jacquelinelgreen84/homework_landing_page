@@ -1,0 +1,97 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+* {
+	box-sizing: border-box; /* allows us to tell the browser how to measure our elements.  Now the width property includes content, padding, and border, instead of just the content*/
+	font-family: Roboto;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+	background-color: #FFFFFF;
+}
+
+a {
+ 	text-decoration: none;
+}
+ header nav {
+ 	background-image: url(bg.jpg);
+ 	display: flex;
+ 	flex-direction: column;
+ 	align-items: flex-start;
+ }
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+footer {
+	background-color: rgb(242,244,246);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#logo {
+	/*color: #FFFFFF;*/
+	font-family: Roboto;
+	font-weight: black;
+	size: 40px;
+}
+
+article{
+	color: #033048;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	text-align: center;
+
+}
+
+.container{
+	display: flex;
+	align-content:wrap;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#nowbutton{
+	padding: 10px 45px;
+	background: rgb(16,204,114);
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+
+#signupbutton{
+	padding: 10px 45px;
+	background: rgb(115,176,248);
+	color:#FFFFFF;
+	border-radius: 5px;
+}
+
+#slowiPhone{
+	align-content: flex-start;
+	align-items: center;
+	/*padding: 0px 50px 0px 25px;*/
+}
+
+#meggings{
+	align-content: center;
+	align-items: center;
+	padding: 
+}
+
+#farm{
+	align-content: flex-end;
+	align-items: center;
+}
