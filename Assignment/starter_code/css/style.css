@@ -36,20 +36,22 @@ body#home {
 }
 body#blog{
 	display: grid;
-	grid-template-columns: 20% 60% 20%;
-	grid-template-rows: 150px 350px 600px 100px;
-	grid-gap: 25px;
+	grid-template-columns: minmax(20%, auto) minmax(50%, auto) minmax(20%,auto);
+	grid-template-rows: 150px minmax(350px, auto) minmax(600px,auto) 100px;
+	grid-gap: 25px 25px;
 	grid-template-areas:"a a a"
 						"b c d"
-						"e e e"
-						"f f f"
+						"e f g"
+						"h h h"
 }
 body#home header{
+	grid-area: a;
+	padding: 25px 0px 200px 100px;
+}
+body#home header h2{
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	grid-area: a;
-	padding: 0px 0px 200px 100px;
 }
 body#blog header{
 	display: flex;
@@ -58,10 +60,22 @@ body#blog header{
 	flex:1;
 	grid-area:a;	
 }
+
 nav{
 	display: flex;
 	color:#FFFFFF;
+	justify-content: space-between;
+	align-items: flex-end;
+	grid-area:a;
 }
+
+body#home header nav{
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	grid-area: a;
+}
+
 header{
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
@@ -115,7 +129,7 @@ body#home footer{
 	grid-area: e;
 }
 body#blog footer{
-	grid-area: f;
+	grid-area: h;
 }
 #button{
 	display: flex;
@@ -152,14 +166,25 @@ blockquote {
 	grid-area: d;
 	display:flex;
 	flex-direction: column;
+	padding-right: 25px;
 }
 #left{
 	grid-area: b;
-}
-#secondary{
-	grid-area: e;
+
+	
 }
 
+ul{
+	list-style: none;
+	color:rgb(142,149,146);
+}
+#secondary{
+	grid-area: f;
+}
+
+body#blog p{
+	word-wrap: break-word;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -181,9 +206,14 @@ blockquote {
 }
  a{
  	text-decoration: none;
- 	justify-content: space-around;
-
+ 	justify-content: space-between;
+ 	color:#FFFFFF;
  }
+
+ a:hover{
+ 	color:rgb(113, 252, 185);
+ }
+ 
  span {
  	font-weight:500;
  	font-size: 14px;
@@ -193,4 +223,11 @@ blockquote {
 	font-weight: 700;
 	font-size: 9px;
 	padding-bottom:15px;
+}
+.publishingdate{
+	color:rgb(142,149,146);
+	/*when using fonts how do you make the font weight and style work together?
+	ie. 300i like it says in the description under font weight*/
+	font-weight: 300;
+	font-style: italic;
 }
